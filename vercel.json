@@ -25,4 +25,7 @@
         "dest": "projectname/wsgi.py"
       }
     ]
+    
+  "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 }]
+
   }
