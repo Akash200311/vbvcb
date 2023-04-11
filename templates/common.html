@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head><link rel="stylesheet" href="{%static 'nav.css'%}">
+
+
+
+
+
+
+<body id="body">
+
+    
+        
+        
+    <div class="main">
+        <div class="top">
+            <nav class="navbar">
+                <div class="navbar-container container">
+                    <input type="checkbox" name="" id="">
+                    <div class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div>
+                    <ul class="menu-items">
+                        <li> <div  id="change-state"><img src="{%static 'off-button.png' %}" alt="error" class="i1" id="s-c1" onclick="state1()"></div></li>
+                        <li><a href="/">Home</a></li>
+                   
+                        <li><a href="/">Blogs</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li class="search">
+                            <form method="get">
+                            <div class="P">
+                                <div class="portion1"><input type="text" placeholder="Search" class="search" name='q' value=""></div>
+                                <div class="por2"><input type="image"  src="{%static 'A.png'%}"class="icon3" ></div>
+                            
+                            </div>
+                        </li>
+                           
+                        </form>
+                     
+                        
+
+
+
+                    </ul>
+                    <h1 class="logo">Navbar</h1>
+                </div>
+          
+            </nav>
+        </div>
+
+        {% block  content%}
+
+
+
+
+        
+        
+        {% endblock  %}
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

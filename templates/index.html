@@ -1,0 +1,150 @@
+
+           {% extends 'common.html' %}
+           {% block content %}
+           {% load static %}
+           <link rel="stylesheet" href="{%static 'style.css' %}">
+        
+           <script src="{%static '1.js' %}"></script>
+
+       
+           <div class="Middle">
+                <div class="categories">
+                    <h1>Category</h1>
+                    <ul class="ui" name="Home"><a href="/" class="yy">Home</a></ul>
+
+                    {%for r in my_data1 %}
+                    <ul class="ui" name="Home"><a href="?A={{r.id}}" class="yy"> {{r}}</a></ul>
+                    {% endfor %}   
+                </div>
+                {%if count1 == 0 %}
+                  
+           <div class="lo">    
+            
+
+                <div class="mid" id="mid">
+            
+
+                    {%for y in my_data1%}
+                   
+                    <h1>{{y}}</h1>
+                    <br>
+                    <br>
+                   
+                    <div class="row">
+                        {% for x in my_data %}
+                      
+
+                        {%if  x.choose == y %}
+                        <div class="column">
+                            <div class="s">
+                                <div class="Y">
+
+                                    <img  alt="error" class="news-img1" src="/media/{{x.image}}">
+                                </div>
+                                <div class="content"><p class="text">
+                            
+                                    {{x.Desc}}
+                                </p></div>
+                                <div class="button">
+                                    <a href="/blog/{{x.new_slug1}}"><img class="read-more" id="y0" src="{%static 'read-more.png' %}"></a></div>
+                                    
+                </div>
+            </div>
+
+
+            {% endif %}
+            {% endfor %}
+        </div>
+            {% endfor %}
+
+            {% else %}
+
+
+
+
+            
+            <div class="mid" id="mid">
+                  <h1></h1>
+                    
+    
+
+           
+                <div class="row">
+                    {% for x in my_data %}
+                  
+                    <div class="column">
+                        <div class="s">
+                            <div class="Y">
+
+                                <img  alt="error" class="news-img1" src="/media/{{x.image}}">
+                            </div>
+                            <div class="content"><p class="text">
+                        
+                                {{x.Desc}}
+                            </p></div>
+                            <div class="button">
+                                <a href="/blog/{{x.new_slug1}}"><img class="read-more" id="y0" src="{%static 'read-more.png' %}"></div></a>
+                                
+            </div>
+        </div>
+  
+        {% endfor %}
+
+    </div>
+
+
+        
+
+
+
+
+
+
+            
+            {% endif %}
+
+
+    </div>
+    </div>
+    </div>
+    </div> 
+    </div> 
+
+    
+    
+        <div class="end">
+            <div class="heading"></div> 
+    
+    
+            <div class="about-us">
+                <div class="s1">
+                    <div class="s1-1"> 
+                   <h1>LOGO</h1>
+                 </div>
+                    <div class="sm-2">
+                 
+                        <div class="sm1">
+                            {%for h in profile%}
+                            
+                        <a href="//{{h.twitter_link}}" target="_blank"> <img src="{%static 'twitter.png' %}" alt="error" class="icon1"></a>
+                       <a href="//{{h.fb_link}}" target="_blank"> <img src="{%static 'facebook.png' %}" alt="error" class="icon1"></a>
+                      <a href="//{{h.insta_link}}" target="_blank">  <img src="{%static 'instagram.png' %}" alt="error" class="icon1"></a>
+                      
+                      {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="s3">
+                    <a href="/Privacy" class="tr"><p class="g">Privacy Policy</p></a>
+                    <a href="/contact" class="tr"> <p class="g"> Contact US</p></a>
+                </div>
+            </div>
+         
+           </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script>
+    <script src="{%static '2.js' %}"></script>
+    </div>
+                {% endblock content %}
